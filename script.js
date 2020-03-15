@@ -9,5 +9,12 @@ let vm = new Vue({
 	    n: 3,
 	    m: "Строка",
 	    query: "Find",
+	    hS:{
+	    	blue: false,
+	    	u: true
+	    },
+	    a: 5,
+	    items: ["lf", "dsggs", "ewsr", "gsgf"],
+	    b: 10,
 	}
 })

@@ -8,7 +8,9 @@
 <body>
 	<div id = "app">
 		{{message}}
+		<br>
 		<br><input type="text" v-model="mes">
+		<br>
 		<p>{{ mes }}</p>
 		<input type="checkbox" v-model="checked">
 		<p>{{checked}}</p>
@@ -27,12 +29,26 @@
 		<p>{{m.split("").reverse().join("")}}</p>
 		<input type="text" v-model="query">
 		<a v-bind:href="'https://google.com/search?q=' + query">Find</a>
+		<br>
+		<br>
 		<label>
 			<input type="checkbox" v-model="hS.blue">Синий
 		</label>
 		<label>
-			<input type="checkbox" v-model="hS.un">Подчеркнутый
+			<input type="checkbox" v-model="hS.u">Подчеркнутый
 		</label>
+		<h1 v-bind:class="{'header--blue': hS.blue, 'header--u' : hS.u}">Заголовок</h1>
+		<input type="number" v-model="a">
+		<p>число: {{a%2==0 ? "Четное" : "Нечетное"}}</p>
+		 <ul>
+		 	<li v-for="item in items">
+		 	{{item}}
+		    </li>
+		 </ul>
+		 <ul>
+		 	<li v-for="j in b">{{j*j}}</li>
+		 </ul>
+
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
