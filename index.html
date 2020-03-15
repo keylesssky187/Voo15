@@ -8,6 +8,31 @@
 <body>
 	<div id = "app">
 		{{message}}
+		<br><input type="text" v-model="mes">
+		<p>{{ mes }}</p>
+		<input type="checkbox" v-model="checked">
+		<p>{{checked}}</p>
+		<label><input type="radio" value="First" v-model="p">First</label>
+		<label><input type="radio" value="Second" v-model="p">Second</label>
+		<p>{{p}}</p>
+		<select v-model="language">
+			<option>Js</option>
+			<option>Python</option>
+			<option>C++</option>
+		</select>
+		<p>{{language}}</p>
+		<input type="number" v-model="n">
+		<p>Удвоенное число: {{n * 23}}</p>
+		<input type="text" v-model="m">
+		<p>{{m.split("").reverse().join("")}}</p>
+		<input type="text" v-model="query">
+		<a v-bind:href="'https://google.com/search?q=' + query">Find</a>
+		<label>
+			<input type="checkbox" v-model="hS.blue">Синий
+		</label>
+		<label>
+			<input type="checkbox" v-model="hS.un">Подчеркнутый
+		</label>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
